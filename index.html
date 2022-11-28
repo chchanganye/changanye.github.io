@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>疫情防控场所码</title>
+<link rel="stylesheet" href="css/hs.css">
+<style>
+	#changdi{
+	  background-color: transparent;
+	  width: 100%;
+	  margin: 0 auto;
+	  margin-top: 40%;
+	  margin-left: 0%;
+	  position: fixed;
+	  z-index: 100;
+	  /*  line-height: 100px; */
+	/*    text-align: center; */
+	    font-size:394%;
+		font-family: '黑体';
+	/* 	font-weight: bold; */
+	    color: #ffffff;
+		float: left;
+		text-align: center;
+	}
+	#mz{
+	  background-color: transparent;
+	  width: 100%;
+	  margin: 0 auto;
+	  margin-top: 101%;
+	  margin-left: 9%;
+	  position: fixed;
+	  z-index: 100;
+	  /*  line-height: 100px; */
+	/*    text-align: center; */
+	    font-size:394%;
+		font-family: '黑体';
+		font-weight: bold;
+	    color: #000000;
+		float: left;
+
+	}
+	#sfz{
+	  background-color: transparent;
+	  width: 100%;
+	  margin: 0 auto;
+	  margin-top: 111.5%;
+	  margin-left: 9%;
+	  position: fixed;
+	  z-index: 100;
+	  /*  line-height: 100px; */
+	/*    text-align: center; */
+	    font-size:300%;
+		font-family: '黑体';
+/* 		font-weight: bold; */
+	    color: #898989;
+		float: left;
+	
+	}
+#clock{
+
+  width: 100%;
+
+  margin: 0 auto;
+  margin-top: 65%;
+  margin-left: 30%;
+  position: fixed;
+  z-index: 100;
+  /*  line-height: 100px; */
+/*    text-align: center; */
+    font-size:320%;
+	font-family: '思源黑体';
+/* 	font-weight: bold; */
+    color: #8f8f8f;
+	float: left;
+
+}
+#clock2{
+
+  width: 100%;
+
+  margin: 0 auto;
+  margin-top: 75.5%;
+  margin-left:19%;
+  position: fixed;
+  z-index: 100;
+
+    font-size:800%;
+	font-family: '方正小标宋简体';
+/* 	font-weight: bold; */
+	letter-spacing: 20px;
+    color: black;
+	float: left;
+
+}
+
+</style>
+<script>
+function showTime(clock2){
+    var now = new Date();
+	var year = now.getFullYear();
+    var month= now.getMonth();
+    var day = now.getDate();	
+	month = month+1;
+    var hour = now.getHours();
+    var minu = now.getMinutes();
+    var second = now.getSeconds();
+	var sec;
+	var m;
+	var h;
+	if(second<10){
+	sec="0"+second;
+	}
+	else{
+	sec=second;
+	}
+	if(hour<10){
+	h="0"+hour;
+	}
+	else{
+	h=hour;
+	}
+	if(minu<10){
+	m="0"+minu;
+	}
+	else{
+	m=minu;
+	}
+	var riqi = year+"年"+month+"月"+day+"日";
+	clock.innerHTML=riqi;
+    var time = h+":"+m+":"+sec;
+    clock2.innerHTML=time;
+}
+
+window.onload = function(){
+    var clock2 = document.getElementById("clock2");
+    window.setInterval("showTime(clock2)",1000);
+  
+}
+</script>
+</head>
+
+<body>
+	<input id=changdi type=text value=驻马店青少年宫科技馆 style="border-style:none">
+	<div id ="clock"></div>
+	<div id ="clock2"></div>
+	<input id=mz type=text value=刘*硕 style="border-style:none">
+	<input id=sfz type=text value=342224*********1715 style="border-style:none">
+
+</body>
+</html>
